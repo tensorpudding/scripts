@@ -1,0 +1,29 @@
+.TH say 1 "April 8, 2011" "" "say"
+.SH NAME
+say \- text-to-speech on the command-line
+.SH SYNOPSIS
+.B say
+[ -n | -f FILE | [WORDS]]
+.SH DESCRIPTION
+.B say
+accepts input on the command line, either a series of words to be read, or
+possibly a file specified with the
+.B \-f
+option, or the standard input if
+.B \-n
+is specified. The input is passed to
+.B festival 
+for processing
+.SH OPTIONS
+.PP
+.PD 0
+.TP 10
+.BI \-n
+When this option is present, input is read from STDIN.
+.TP
+.BI \-f "\| FILE\^"
+.I FILE
+is read as a text file, and the input is read, line by line.
+.PD
+.SH "SEE ALSO"
+festival(1)
